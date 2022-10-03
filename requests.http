@@ -1,0 +1,31 @@
+### API-1 Create table todo
+GET http://localhost:3000/
+
+### API-1 Get All todos
+GET http://localhost:3000/todos/
+###Scenario-1
+GET http://localhost:3000/todos/?status=TO%20DO
+###Scenario-2
+GET http://localhost:3000/todos/?priority=HIGH
+###Scenario-3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###Scenario-4
+GET http://localhost:3000/todos/?search_q=HTML
+
+### API-2 Get Specific todos
+GET http://localhost:3000/todos/3/
+
+### API-3 Create Todo Item
+POST  http://localhost:3000/todos/
+Content-Type: application/json 
+
+{"id": 10,"todo": "Learn React","priority":"High", "status":"To Do"} 
+
+### API-4 Modify Specific todos
+PUT  http://localhost:3000/todos/3/
+Content-Type: application/json
+
+{"todo":"Learn Node JS"} 
+
+### API-5 Delete Specific todos
+DELETE  http://localhost:3000/todos/3/
